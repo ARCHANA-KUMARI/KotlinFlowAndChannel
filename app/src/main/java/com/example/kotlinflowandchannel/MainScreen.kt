@@ -84,6 +84,8 @@ private fun DemoButton(
 /* ---------- Sample data (demo only) ---------- */
 
 private val sampleDemos = listOf(
+
+    DemoItem("MutableStateFlow", "Hot state holder: always has a value, conflated, replays latest to collectors", "mutable_state_flow"),
     DemoItem("Lists", "LazyColumn with stable keys", "lists"),
     DemoItem("Forms", "Text fields and validation", "forms"),
     DemoItem("Animations", "animate*AsState and transitions", "animations"),
