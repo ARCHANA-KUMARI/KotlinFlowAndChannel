@@ -1,5 +1,6 @@
 package com.example.kotlinflowandchannel
 
+import android.util.Log
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -20,7 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewLightDark
-
+private const val TAG = "MainScreen"
 data class DemoItem(
     val label: String,
     val description: String,
@@ -65,7 +66,10 @@ private fun DemoButton(
     modifier: Modifier = Modifier
 ) {
     FilledTonalButton(
-        onClick = onClick,
+        onClick = {
+            Log.i(TAG, "DemoButton: ")
+            onClick()
+        },
         modifier = modifier
             .fillMaxWidth()
             .heightIn(min = 64.dp)
